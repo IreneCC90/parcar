@@ -30,10 +30,14 @@ public class Car
     	Garage g = new Garage();
     	Car car = new Car(g);
         car.accelerate();
-        slowDown();
-        moveDown();
-        accelerate();
-        car.printGarage();
+//		Son métodos de la clase "Car" que hay que llamarlos con el objeto (car)
+//		creado de la clase "Car"
+        car.slowDown();
+        car.moveDown();
+        car.accelerate();
+//		Es un método de la clase "Garage" por lo tanto hay que llamarlo con el objeto (g)
+//		creado de la clase "Garage"
+        g.printGarage();
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
@@ -59,7 +63,8 @@ public class Car
      * @throws InterruptedException 
      */
     public void slowDown() throws InterruptedException{
-    	string c = new string("     *");
+//		String va con S mayúscula
+    	String c = new String("     *");
     	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
@@ -74,8 +79,9 @@ public class Car
      * @throws InterruptedException 
      */    
     public void moveDown() throws InterruptedException{
-    	string c = new string("\t\t\t\t  *"));
-    	for(int i=0, i<5, i++)
+    	String c = new String("\t\t\t\t  *");
+//		Aquí el error era de sintaxis, no son comas, son punto y coma
+    	for(int i=0; i < 5; i ++)
         {
     		if(i!=4)
     			System.out.println(c);
